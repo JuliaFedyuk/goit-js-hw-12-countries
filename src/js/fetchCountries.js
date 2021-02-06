@@ -8,7 +8,7 @@ function fetchCountries(searchQuery) {
       Accept: 'application/json',
     },
   };
-  return fetch(url, options)
+  fetch(url, options)
     .then(response => response.json())
     .then(countries => updateCountriesMarkup(countries))
     .catch(error => console.log(error));
